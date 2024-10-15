@@ -1,0 +1,1 @@
+api_key = "esta clave la genera chatgpt desde tu perfil o registro"
