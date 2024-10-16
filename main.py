@@ -60,7 +60,7 @@ def main():
         # escoger el modelo a usar y los mensajes tipo array
         # recogiendo los mensajes anteriores y teniendolos en cuenta sus respuestas a siguientes preguntas tendran en cuenta la pregunta anterior y el contexto
         response = openai.ChatCompletion.crate(model="gpt-3.5-turbo", 
-                                            messages=messages)
+                                               messages=messages)
 
 
         # me quedo con la respuesta
@@ -79,11 +79,11 @@ def main():
         print(response_content)
  
  
-def __promp() -> str:
+def __prompt() -> str:
     # Es un imput manejado a traves de prompt
-    content = typer.prompt("\n¿sobre que quieres hablar?")
+    prompt = typer.prompt("\n¿sobre que quieres hablar?")
     
-    if content == "salir":
+    if prompt == "salir":
         # formulario de confirmacion para asegurarnos que queremos salir
         # ademas lo guardo en una variable exit
         exit = typer.confirm('¿estas seguro de salir?')
